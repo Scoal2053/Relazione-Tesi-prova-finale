@@ -6,9 +6,9 @@ from shapely.geometry import Point
 # Caricamento dei file CSV
 def load_data():
     try:
-        stazioni = pd.read_csv("/mnt/c/Users/hp/Desktop/DatiMezziPubblici/sistema_ferroviario_urbano_layer_0_stazioni__final.csv", sep=";", quotechar='"')
-        fermate = pd.read_csv("/mnt/c/Users/hp/Desktop/DatiMezziPubblici/tpl_fermate.csv", sep=";", quotechar='"')
-        metro_fermate = pd.read_csv("/mnt/c/Users/hp/Desktop/DatiMezziPubblici/tpl_metrofermate.csv", sep=";", quotechar='"')
+        stazioni = pd.read_csv("", sep=";", quotechar='"') # Sostituisci con il percorso del tuo file CSV delle stazioni
+        fermate = pd.read_csv("ì", sep=";", quotechar='"') # Sostituisci con il percorso del tuo file CSV delle fermate
+        metro_fermate = pd.read_csv("ì", sep=";", quotechar='"') # Sostituisci con il percorso del tuo file CSV delle fermate metro
         return stazioni, fermate, metro_fermate
     except Exception as e:
         print(f"Errore nel caricamento dei dati: {e}")
@@ -52,8 +52,3 @@ if stazioni is not None:
         mappa.save("mappa_trasporti.html")
         print("Mappa salvata con successo!")
 
-# Blu stazioni ferroviarie
-# Rosso fermate bus
-# Verde fermate metro
-
-# fare 3 mappe distinte

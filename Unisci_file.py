@@ -2,7 +2,7 @@ import pandas as pd
 from collections import Counter
 
 # Percorso del file gigante
-file_path = "/mnt/c/Users/hp/Desktop/Date AI/gigante.csv"
+file_path = "" # Sostituisci con il percorso del tuo file 
 
 # Lista di possibili formati da verificare
 possible_formats = [
@@ -44,10 +44,10 @@ for chunk in pd.read_csv(file_path, chunksize=chunk_size):
         print(f"Le colonne 'local_ts_start' e 'local_ts_end' non esistono nel chunk")
 
 # Stampa i risultati
-print("📊 Formati rilevati per 'local_ts_start':")
+print("Formati rilevati per 'local_ts_start':")
 for fmt, count in formats_start.items():
     print(f"  {fmt}: {count} occorrenze")
 
-print("\n📊 Formati rilevati per 'local_ts_end':")
+print("\nFormati rilevati per 'local_ts_end':")
 for fmt, count in formats_end.items():
     print(f"  {fmt}: {count} occorrenze")

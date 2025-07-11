@@ -2,7 +2,7 @@ import pandas as pd
 import folium
 from folium.plugins import MarkerCluster
 import branca
-final_path = "/mnt/c/Users/hp/Desktop/AI STAGE/Tensore/tensore_5_1_with_clusters_2-1.csv"
+final_path = "" # Inserisci il percorso del file CSV qui del tensore con i cluster
 def start():
     df = pd.read_csv(final_path, sep=";")
 

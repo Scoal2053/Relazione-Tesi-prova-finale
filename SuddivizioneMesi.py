@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Carica il file originale
-file_path = r'/mnt/c/Users/hp/Desktop/Provider AI/202209-202311_provider_periods.csv'
+file_path = r'' # Sostituisci con il percorso del tuo file CSV dei periodi provider
 df = pd.read_csv(file_path)
 
 # Assicurati che le date siano in formato datetime
@@ -10,7 +10,7 @@ df['start_date'] = pd.to_datetime(df['start_date'])
 df['end_date'] = pd.to_datetime(df['end_date'])
 
 # Crea una cartella di output
-output_folder = '/mnt/c/Users/hp/Desktop/Provider AI/split_by_month'
+output_folder = '' # Sostituisci con il percorso desiderato per i mesi divisi
 os.makedirs(output_folder, exist_ok=True)
 
 # Lista dove salviamo le righe splittate

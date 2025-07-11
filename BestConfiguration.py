@@ -7,14 +7,14 @@ import json
 import pandas as pd
 import os
 
-FINAL_FOLDER_NAME = "1"
-BASE_OUTPUT_DIR = "/mnt/c/Users/hp/Desktop/AI STAGE/Autoencoder"  # Directory base di output
-CSV_PATH = "/mnt/c/Users/hp/Desktop/AI STAGE/Tensore/tensore_5_1.csv"     # Path al file CSV
+FINAL_FOLDER_NAME = ""  # Nome della cartella finale
+BASE_OUTPUT_DIR = ""  # Directory base di output
+CSV_PATH = ""     # Path al file CSV
 OUTPUT_DIR = os.path.join(BASE_OUTPUT_DIR, FINAL_FOLDER_NAME)  # Percorso completo della directory di output
 
 
 def test1():
-    file_path = Path("/mnt/c/Users/hp/Desktop/AI STAGE/Tensore/tensore_5_1.csv")
+    file_path = Path("") # Inserisci il percorso del file CSV qui del tensore 
     df_poi = pl.read_csv(file_path, separator=";")
 
     print(df_poi.head())
@@ -26,7 +26,7 @@ def test1():
     print(df_poi.null_count())
 
 # Leggi i risultati dal file CSV
-df_results = pd.read_csv(os.path.join(OUTPUT_DIR, "risultati_grid_search2.csv"))
+df_results = pd.read_csv(os.path.join(OUTPUT_DIR, "")) # Inserisci il nome del file CSV qui
 
 # Usa il nome corretto della colonna per ordinare i risultati
 df_results_sorted = df_results.sort_values(by="final_loss")  # Cambiato da "loss" a "final_loss"

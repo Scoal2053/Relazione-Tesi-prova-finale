@@ -24,7 +24,7 @@ def create_map(gdf):
     return m
 
 # Esecuzione
-file_path = r"c:\Users\hp\Desktop\NIL\ds964_nil_wm.geojson"  # Sostituisci con il nome del tuo file GeoJSON
+file_path = r""  # Sostituisci con il nome del tuo file GeoJSON
 gdf = load_geojson(file_path)
 if gdf is not None:
     mappa = create_map(gdf)
